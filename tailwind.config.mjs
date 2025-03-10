@@ -7,9 +7,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        punk: ['PunkRocker', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      screens: {
+        '3xl': '1800px',
+        '4xl': '2160px',
       },
     },
   },
