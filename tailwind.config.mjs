@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        punk: ['PunkRocker', 'sans-serif'],
+        grid: ['Gridular', 'sans-serif'],
+        punk: ['Big Shoulders', 'sans-serif']
       },
       colors: {
         background: "var(--background)",

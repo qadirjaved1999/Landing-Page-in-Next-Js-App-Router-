@@ -10,8 +10,8 @@ export default function Hero() {
           <div className="content-wrapper max-w-3xl text-center">
             {/* Headings - Responsive Font Sizes */}
             <h1 className="text-white text-xs md:text-sm lg:text-base font-bold uppercase">Land of Cult</h1> {/*fontFamily:font-punk*/}
-            <h1 className="text-white text-4xl md:text-6xl lg:text-8xl leading-tight font-bold uppercase">
-              New Land Available
+            <h1 className="text-white text-4xl md:text-6xl lg:text-8xl leading-tight font-bold font-punk  uppercase">
+            WHERE DARKNESS MEETS DESTINY
             </h1>
           </div>
         </div>
