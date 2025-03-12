@@ -1,6 +1,11 @@
 {
-    "mainHeading": "Welcome to Next.js!",
-    "subHeading": "Build scalable web applications effortlessly.",
-    "ctaButton": "Get Started",
-    "about":"This is My About Us Page"
-  }
+  "myAccount": "My Account",
+  "documentation": "Documentation",
+  "discover": "Discover",
+  "newWorld": "New World",
+  "community": "Community",
+  "lunchMapBtn": "lunch map",
+  "whitepaperBtn": "whitepaper",
+  "darknessMeets":"WHERE DARKNESS MEETS DESTINY",
+  "discussionForJoining":" Have your Say. Join the Discussion."
+}
