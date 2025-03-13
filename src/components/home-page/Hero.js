@@ -12,13 +12,13 @@ export default function Hero() {
   ];
 
   return (
-    <div className="hero-background relative w-full h-[110vh] bg-[url('/assets/images/prostatix_post_1.jpg')] bg-cover bg-[top] object-cover bg-no-repeat">
+    <div className="hero-background relative w-full min-h-[110vh] bg-[url('/assets/images/prostatix_post_1.jpg')] bg-cover bg-[top] object-cover bg-no-repeat">
 
       {/* Dark Gradient Overlay */}
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
 
       {/* Hero Content Wrapper */}
-      <div className="wrapper w-full flex flex-col items-center justify-center h-full px-6">
+      <div className="wrapper w-full flex flex-col items-center justify-center h-[50rem] px-6">
         {/* Image */}
         <div className="w-full flex justify-center">
           <Image src="/assets/icons/logo.webp" alt="Logo" width={370} height={100} className="mb-6" />
@@ -32,10 +32,10 @@ export default function Hero() {
       </div>
 
       {/* Buttons Section */}
-      <div className="w-full flex flex-wrap justify-center items-center gap-4 bg-black p-6 md:p-8 pb-12 md:pb-20">
+      <div className="w-full flex flex-wrap justify-center items-center gap-4 p-6 md:p-8 pb-12 md:pb-20">
 
         {/* Text */}
-        <p className="text-white text-sm md:text-base lg:text-lg text-center">
+        <p className="text-gray-300 text-sm md:text-base lg:text-lg text-center z-10">
           {label.discussionForJoining}
         </p>
 
@@ -43,7 +43,7 @@ export default function Hero() {
         {socialButtons.map(({ label, icon }, index) => (
           <button
             key={index}
-            className="relative border-2 border-white text-white text-lg uppercase px-10 py-1 rounded-full transition-all duration-300 ease-in-out bg-transparent hover:shadow-[0_0_5px_white,0_0_5px_white,0_0_5px_white] flex items-center gap-3"
+            className="relative border-2 border-gray-300 text-gray-300 text-lg uppercase px-10 py-1 rounded-full transition-all duration-300 ease-in-out bg-transparent hover:shadow-[0_0_5px_white,0_0_5px_white,0_0_5px_white] flex items-center gap-3"
           >
             {icon}
             {label}
