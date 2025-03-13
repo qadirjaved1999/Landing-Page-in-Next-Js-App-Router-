@@ -1,49 +1,53 @@
+import label from "@/libs/english.json";
 export default function VirtualWorld() {
     return (
-        <section className="relative w-full aspect-[16/9] min-h-[170vh] flex justify-center items-center py-10 px-4 bg-[url('/assets/images/Group_12.png')] bg-cover bg-bottom bg-no-repeat">
+        <section className="relative w-full aspect-[16/9] min-h-[180vh] flex justify-center items-center py-10 px-4 bg-black bg-[url('/assets/images/Group_12.png')] bg-cover bg-bottom bg-no-repeat">
 
-            {/* 🔹 Full-Screen Gradient Overlay for Left, Right, and Bottom */}
-            <div className="absolute inset-0">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_rgba(0,0,50,0.9),_transparent_30%)]"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(0,0,50,0.9),_transparent_30%)]"></div>
-            </div>
-
-            <div className="absolute top-[25rem] transform -translate-y-1/2 text-white max-w-[40rem] text-center">
-                <h1 className="w-full text-3xl md:text-5xl lg:text-6xl font-extrabold uppercase leading-tight">
-                    wasteland Token
+            <div className="absolute top-[18rem] transform -translate-y-1/2 text-gray-300 max-w-[40rem] text-center">
+                <h1 className="w-full text-3xl md:text-5xl lg:text-6xl font-extrabold font-punk uppercase leading-tight">
+                    {label.wastelandToken}
                 </h1>
             </div>
 
-            <div className="absolute bottom-[16rem] flex justify-center items-center w-[63rem] shrink-0">
-                <img src="/assets/images/Group_13.png" className="w-full h-auto object-contain" />
-            </div>
+            <div className="relative flex justify-center items-center w-full max-w-[63rem] shrink-0">
+                <img
+                    src="/assets/images/Group_13.png"
+                    className="w-full h-auto object-cover sm:object-contain"
+                />
 
-            <div className="absolute left-[24rem] bottom-[38rem] w-[14rem]">
-                <p className=" text-gray-400 text-xs text-start"> sed do eiusmod tempor incididunt ut labore. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua sed do eiusmod tempor incididunt.</p>
-            </div>
+                {/* Content 1 */}
+                <div className="absolute left-[9%] top-[22%] w-[14rem] xs:hidden">
+                    <p className="text-gray-400 text-xs sm:text-[10px] md:text-sm text-start">
+                        {label.contentOne}
+                    </p>
+                </div>
 
-            <div className="absolute left-[22rem] bottom-[26rem] w-[14rem]">
-                <p className=" text-gray-400 text-xs text-start"> VR set available connect</p>
-            </div>
+                <div className="absolute left-[7%] top-[63%] w-[14rem] xs:hidden">
+                    <p className="text-gray-400 text-xs sm:text-[10px] md:text-sm text-start">
+                        {label.contentTwo}
+                    </p>
+                </div>
 
-            <div className="absolute left-[64.5rem] bottom-[28.7rem] w-[6.5rem]">
-                <p className=" text-gray-400 text-xs text-start"> PC VC Mode Live Inside Land of Cult</p>
-            </div>
-
-            <div className="absolute bottom-44 right-48 w-full flex justify-center items-center gap-4 mt-10">
-                <p className="inline w-[12rem] text-gray-400 text-xs text-start"> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua sed do eiusmod tempor incididunt.</p>
-                <div className="w-[20rem] shrink-0">
-                    <img src="/assets/images/Group_14.png" className="w-full h-auto object-contain" />
+                <div className="absolute right-[7.5rem] top-[56%] w-[6.5rem] xs:hidden">
+                    <p className="text-gray-400 text-xs sm:text-[10px] md:text-sm text-start">
+                        {label.contentThree}
+                    </p>
                 </div>
             </div>
 
-            <div className="absolute bottom-[2rem] w-full flex justify-center gap-4 mt-10">
-                <button className="px-6 py-2 border border-white rounded-full uppercase text-sm tracking-wide bg-white text-black transition">
-                    lorem ipsum
+            <div className="absolute xs:bottom-32 sm:bottom-20 md:bottom-24 lg:bottom-32 xs:right-8 sm:right-14 md:right-28 lg:right-48 w-full flex xs:flex-col-reverse row- justify-center items-center gap-4 mt-10">
+                <p className="inline xs:w-[12rem] sm:w-[12rem] md:w-[12rem] lg:w-[12rem] text-gray-400 text-xs text-start">{label.incididunt}</p>
+                <div className="w-[20rem] shrink-0">
+                    <img src="/assets/images/Group_14.png" className="w-full h-auto object-cover sm:object-contain" />
+                </div>
+            </div>
+
+            <div className="absolute xs:bottom-[-20px] sm:bottom-[2rem] w-full flex flex-wrap justify-center gap-4 mt-10">
+                <button className="relative border-2 border-white text-white text-lg uppercase px-10 py-1 mt-6 rounded-full transition-all duration-300 ease-in-out bg-transparent hover:shadow-[0_0_5px_white,0_0_5px_white,0_0_5px_white]">
+                    {label.getToken}
                 </button>
-                <button className="px-6 py-2 text-white border border-white rounded-full uppercase text-sm tracking-wide hover:bg-white hover:text-black transition">
-                    lorem ipsum
+                <button className="relative border-2 border-white text-white text-lg uppercase px-10 py-1 mt-6 rounded-full transition-all duration-300 ease-in-out bg-transparent hover:shadow-[0_0_5px_white,0_0_5px_white,0_0_5px_white]">
+                    {label.comingSoon}
                 </button>
             </div>
         </section>

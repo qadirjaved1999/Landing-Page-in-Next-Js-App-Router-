@@ -5,8 +5,8 @@
 
 /* Space between carousel cells */
 .carousel-cell {
-  width: 12rem; /* Adjust width */
-  margin-right: 1rem; /* Space between slides */
+  width: 20rem; 
+  margin-right: 5rem; 
   transition: transform 0.3s ease-in-out;
 }
 

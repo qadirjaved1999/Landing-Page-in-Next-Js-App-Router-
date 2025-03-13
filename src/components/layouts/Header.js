@@ -3,9 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import label from "@/libs/english.json";
+import { useRefs } from "@/context/RefsContext";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const refs = useRefs();
+
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
@@ -13,11 +20,11 @@ export default function Header() {
 
         {/* Navigation Links For Desktop (Hidden on Small Screens) */}
         <nav className="hidden md:flex flex-wrap items-center text-base gap-4 lg:gap-6 xl:gap-8">
-          <Link href="#" className="text-white uppercase text-xs md:text-sm lg:text-base">{label.myAccount}</Link>
-          <Link href="#" className="text-white uppercase text-xs md:text-sm lg:text-base">{label.documentation}</Link>
-          <Link href="#" className="text-white uppercase text-xs md:text-sm lg:text-base">{label.discover}</Link>
-          <Link href="#" className="text-white uppercase text-xs md:text-sm lg:text-base">{label.newWorld}</Link>
-          <Link href="#" className="text-white uppercase text-xs md:text-sm lg:text-base">{label.community}</Link>
+          <Link href="#" onClick={(e) => { e.preventDefault(); scrollToSection(refs.myAccount); }} className="text-white uppercase text-xs md:text-sm lg:text-base">{label.myAccount}</Link>
+          <Link href="#" onClick={(e) => { e.preventDefault(); scrollToSection(refs.documentation); }} className="text-white uppercase text-xs md:text-sm lg:text-base">{label.documentation}</Link>
+          <Link href="#" onClick={(e) => { e.preventDefault(); scrollToSection(refs.discover); }} className="text-white uppercase text-xs md:text-sm lg:text-base">{label.discover}</Link>
+          <Link href="#" onClick={(e) => { e.preventDefault(); scrollToSection(refs.newWorld); }} className="text-white uppercase text-xs md:text-sm lg:text-base">{label.newWorld}</Link>
+          <Link href="#" onClick={(e) => { e.preventDefault(); scrollToSection(refs.community); }} className="text-white uppercase text-xs md:text-sm lg:text-base">{label.community}</Link>
         </nav>
 
         {/* Right Side Buttons (Shown on Larger Screens) */}

@@ -1,9 +1,9 @@
 import MainPage from "@/components/home-page/MainPage";
 
-export default function Home() {
+export default function Home({ refs }) {
   return (
     <div className="container w-full min-w-full">
-      <MainPage />
+      <MainPage refs={refs}/>
     </div>
   );
 }
